@@ -859,11 +859,12 @@ footer p {
     }
     
     .contact-info p {
-        justify-content: center;
+        justify-content: flex-start;
+        text-align: left;
     }
     
-    .social-icons {
-        justify-content: center;
+    .social-icons {justify-content: flex-start;
+        text-align: left;justify-content: center;
     }
     
     .gallery-container {
