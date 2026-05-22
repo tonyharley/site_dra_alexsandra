@@ -839,6 +839,10 @@ footer p {
     .contact-map {
         min-height: 300px;
     }
+
+    .contact-map iframe {
+        height: 300px;
+    }
     
     .contact-info {
         text-align: center;
