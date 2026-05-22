@@ -848,10 +848,18 @@ footer p {
         justify-content: flex-start;
         text-align: left;
         margin-bottom: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .contact-info p i {
+        width: 34px;
+        height: 34px;
+        margin-right: 10px;
+        font-size: 0.95rem;
     }
     
-    .social-icons {justify-content: flex-start;
-        text-align: left;justify-content: center;
+    .social-icons {
+        justify-content: flex-start;
     }
     
     .gallery-container {
