@@ -120,3 +120,28 @@ document.addEventListener('click', function(e) {
 // Inicializa o menu mobile
 window.addEventListener('load', initMobileMenu);
 window.addEventListener('resize', initMobileMenu);
+
+// Meta Pixel - rastreia clique em WhatsApp como conversão (Contact)
+document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+    link.addEventListener('click', () => {
+        if (typeof fbq === 'function') {
+            fbq('track', 'Contact');
+        }
+    });
+});
+
+// Meta Pixel - rastreia visualização da seção de procedimentos (ViewContent)
+const proceduresSection = document.querySelector('#procedures');
+if (proceduresSection && 'IntersectionObserver' in window) {
+    const proceduresObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'ViewContent', { content_name: 'Procedimentos' });
+                }
+                observer.disconnect(); // dispara apenas uma vez
+            }
+        });
+    }, { threshold: 0.5 });
+    proceduresObserver.observe(proceduresSection);
+}
