@@ -817,7 +817,11 @@ footer p {
     
     .contact-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .contact-map {
+        min-height: 300px;
     }
     
     .contact-info {
@@ -827,6 +831,7 @@ footer p {
     .contact-info p {
         justify-content: flex-start;
         text-align: left;
+        margin-bottom: 0.4rem;
     }
     
     .social-icons {justify-content: flex-start;
