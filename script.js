@@ -99,34 +99,6 @@ function initMobileMenu() {
     }
 }
 
-// Formulário de contato
-document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    // Validação simples
-    const nome = this.querySelector('input[placeholder="Seu nome"]')?.value;
-    const whatsapp = this.querySelector('input[placeholder="WhatsApp"]')?.value;
-    
-    if (!nome || !whatsapp) {
-        alert('Por favor, preencha seu nome e WhatsApp.');
-        return;
-    }
-    
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
-    
-    // Simula envio
-    setTimeout(() => {
-        alert('✓ Solicitação enviada! Entraremos em contato em até 24h pelo WhatsApp.');
-        this.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 1500);
-});
-
 // Fecha o menu ao clicar fora (mobile)
 document.addEventListener('click', function(e) {
     const navMenu = document.querySelector('.nav-menu');
