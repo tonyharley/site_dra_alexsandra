@@ -70,7 +70,8 @@ header {
     flex-wrap: wrap;
 }
 
-.logo h1 {
+.logo h1,
+.logo .logo-name {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: #704426;
@@ -168,7 +169,8 @@ header {
     flex: 1;
 }
 
-.hero-content h2 {
+.hero-content h2,
+.hero-content h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
@@ -643,7 +645,8 @@ footer p {
 
 /* Responsividade - CORRIGIDO */
 @media (max-width: 992px) {
-    .hero-content h2 {
+    .hero-content h2,
+.hero-content h1 {
         font-size: 2.2rem;
     }
     
@@ -719,7 +722,8 @@ footer p {
         flex: 1;
     }
 
-    .logo h1 {
+    .logo h1,
+.logo .logo-name {
         font-size: 1.2rem;
     }
 
@@ -764,7 +768,8 @@ footer p {
         padding: 2rem 1rem;
     }
     
-    .hero-content h2 {
+    .hero-content h2,
+.hero-content h1 {
         font-size: 1.8rem;
     }
     
@@ -786,7 +791,7 @@ footer p {
         margin-bottom: 2rem;
     }
     
-    .about, .procedures, .gallery, .contact, .faq {
+    .about, .procedures, .gallery, .contact, .faq, .lp-text {
         padding: 2rem 1rem;
     }
     
@@ -906,7 +911,8 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .hero-content h2 {
+    .hero-content h2,
+.hero-content h1 {
         font-size: 1.5rem;
     }
     
@@ -914,7 +920,8 @@ footer p {
         font-size: 1.6rem;
     }
 
-    .logo h1 {
+    .logo h1,
+.logo .logo-name {
         font-size: 1.1rem;
     }
     
@@ -1002,6 +1009,83 @@ footer p {
     }
 }
 
-.hero, .about, .procedures, .gallery, .faq, .contact {
+.hero, .about, .procedures, .gallery, .faq, .contact, .lp-text {
     animation: fadeInUp 0.8s ease-out;
+}
+/* ===== Landing Page - Lipo de Papada ===== */
+.lp-text {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.lp-text p {
+    color: #704426;
+    opacity: 0.9;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+}
+
+.lp-text p:last-child {
+    margin-bottom: 0;
+}
+
+.lp-intro {
+    max-width: 820px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #704426;
+    opacity: 0.9;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.lp-cta-final {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+}
+
+.lp-cta-final p {
+    color: #704426;
+    opacity: 0.9;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 1.8rem;
+}
+
+.lp-disclaimer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #704426;
+    opacity: 0.7;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .lp-text p,
+    .lp-intro,
+    .lp-cta-final p {
+        font-size: 0.95rem;
+    }
+
+    .lp-intro {
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .lp-cta-final {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .lp-disclaimer {
+        padding: 0 1rem 2rem;
+        font-size: 0.78rem;
+        text-align: left;
+    }
 }

@@ -67,3 +67,15 @@ if (proceduresSection && 'IntersectionObserver' in window) {
     }, { threshold: 0.5 });
     proceduresObserver.observe(proceduresSection);
 }
+
+// GA4 - rastreia clique em WhatsApp como lead (objetivo "Gerar leads")
+document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+    link.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+                link_url: link.href,
+                page_location: window.location.pathname
+            });
+        }
+    });
+});
